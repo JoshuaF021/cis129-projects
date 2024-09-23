@@ -1,6 +1,8 @@
 #Define cost of items
 coffeeprice = 5.00
 muffinprice = 4.00
+teaprice = 3.00
+mochaprice = 7.00
 tax = .06
 
 #Get input from the customer
