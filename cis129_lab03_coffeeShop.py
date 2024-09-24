@@ -1,3 +1,8 @@
+#This is a practice coffee shop program designed
+#to request input from the user and output the 
+#calculated total of the user's order including
+#a 6% tax.
+
 #Define cost of items
 coffeeprice = 5.00
 muffinprice = 4.00
@@ -5,7 +10,7 @@ teaprice = 3.00
 mochaprice = 7.00
 tax = .06
 
-#Get input from the customer
+#Get input from the user
 print("""***************************************
 My Coffee and Muffin Shop""")
 coffees = float(input("Number of coffees bought?\n"))
