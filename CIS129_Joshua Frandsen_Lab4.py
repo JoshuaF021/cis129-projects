@@ -34,7 +34,7 @@ def calcStoreBonus(monthlySales):
 
 # This function gets the percent of increase in sales
 def getIncrease():
-    salesIncrease = float(input("Enter percent of sales increase without % sign aka 50 instead of 50%"))
+    salesIncrease = float(input("Enter percent of sales increase without % sign aka 5 instead of 5%"))
     salesIncrease = salesIncrease / 100
     return salesIncrease
 
