@@ -1,5 +1,5 @@
 """ Joshua Frandsen
-CIS 129
+CIS 129 LAB 5
 
 Write a program that will allow a grocery store to keep track of the total number of bottles collected for seven days.
 
@@ -20,14 +20,14 @@ totalPayout = 0
 keepGoing = "y"
 #This variable will be used to run the program again
 
-while keepGoing == "y":
-      for counter in range(1,8):
-          todayBottles = int(input(f"Enter number of bottles for day #{counter}:\n"))
-          totalBottles += todayBottles
-          todayBottles = 0
+#while keepGoing == "y":
+for counter in range(1,8):
+    todayBottles = int(input(f"Enter number of bottles for day #{counter}:\n"))
+    totalBottles += todayBottles
+    todayBottles = 0
 
-      totalPayout = totalBottles * .1
-      print("The total number of bottles collected is " totalBottles)
-      print("The total paid out is $ " totalPayout)
+totalPayout = totalBottles * .1
+print("The total number of bottles collected is",totalBottles)
+print(f"The total paid out is ${totalPayout:.2f}")
 
-      keepGoing = str(input("Do you want to enter another week’s worth of data? (Enter y or n):")
+#keepGoing = str(input("Do you want to enter another week’s worth of data? (Enter y or n):")
