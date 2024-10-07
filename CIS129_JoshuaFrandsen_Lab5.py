@@ -9,25 +9,35 @@ The output of the program should include the total number of bottles returned an
 
 The program will ask the user if they have more data to enter and will end the program if they do not. """
 
-totalBottles = 0
 #This variable will store the accumulated bottle values
-counter = 1
+totalBottles = 0
 #This variable will control the loop 
-todayBottles = 0
+counter = 1
 #This variable will store the number of bottles returned on a day
-totalPayout = 0
+todayBottles = 0
 #This variable will store the calculated value of totalBottles times .10
-keepGoing = "y"
+totalPayout = 0
 #This variable will be used to run the program again
+keepGoing = "y"
 
-#while keepGoing == "y":
-for counter in range(1,8):
-    todayBottles = int(input(f"Enter number of bottles for day #{counter}:\n"))
-    totalBottles += todayBottles
-    todayBottles = 0
+# loop to repeat program each time user inputs y at end of program
+while keepGoing == "y":
+    #input loop to collect number of bottles each day for 7 days and add all 7 inputs to total for the week
+    for counter in range(1,8):
+        todayBottles = int(input(f"Enter number of bottles for day #{counter}: "))
+        totalBottles += todayBottles
+        #reset's variable for next loop
+        todayBottles = 0
+    # calculates payout based on total bottles collected for the week
+    totalPayout = totalBottles * .1
 
-totalPayout = totalBottles * .1
-print("The total number of bottles collected is",totalBottles)
-print(f"The total paid out is ${totalPayout:.2f}")
+    #Prints total bottles collected for the week and  total payout for the week
+    print("\nThe total number of bottles collected is",totalBottles)
+    print(f"The total paid out is ${totalPayout:.2f}")
 
-#keepGoing = str(input("Do you want to enter another week’s worth of data? (Enter y or n):")
+    #resets variable for next loop
+    totalBottles = 0
+
+    # asks user if they want to run the program again and input becomes variable's new value
+    keepGoing = str(input("\nDo you want to enter another week’s worth of data?\n (Enter y or n): "))
+    
