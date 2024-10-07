@@ -39,5 +39,5 @@ while keepGoing == "y":
     totalBottles = 0
 
     # asks user if they want to run the program again and input becomes variable's new value
-    keepGoing = str(input("\nDo you want to enter another week’s worth of data?\n (Enter y or n): "))
+    keepGoing = str(input("\nDo you want to enter another week’s worth of data?\n(Enter y or n): "))
     
