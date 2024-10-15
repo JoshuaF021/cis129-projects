@@ -16,7 +16,7 @@ The program should ask the user for the number of people attending the cookout, 
 #Set variables
 totalHotDogs = 0
 
-totalHotDogs = getTotalHotDogs() 
+getTotalHotDogs(totalHotDogs) 
 showResults(totalHotDogs)
 
 def getTotalHotDogs(totalHotDogs):
@@ -37,14 +37,14 @@ def showResults(totalHotDogs):
     #Set dogsLeft as result of equation using DOGS, total and dogsLeft
     dogsLeft = (DOGS - total % DOGS) % DOGS
     #Set minDogs as result of equation using total, DOGS and dogsLeft
-    minDogs = (total / DOGS) + (0 ** (0 ** dogsLeft))
+    int(minDogs) == (total / DOGS) + (0 ** (0 ** dogsLeft))
     #Set bunsLeft as result of equation using BUNS, total and bunsLeft
     bunsLeft = (BUNS - total % BUNS) % BUNS
     #Set minBuns as result of equation using total, BUNS and bunsLeft
-    minBuns = (total / BUNS) + (0 ** (0 ** bunsLeft))
+    int(minBuns) == (total / BUNS) + (0 ** (0 ** bunsLeft))
 
-    print("\nMinimum packages of hot dogs needed", minDogs)
-    print("Minimum packages of hot dog buns needed", minBuns)
+    print("\nMinimum packages of hot dogs needed", int(minDogs))
+    print("Minimum packages of hot dog buns needed", int(minBuns))
     print("Hot dogs remaining", int(dogsLeft))
     print("Hot dog buns remaining", int(bunsLeft))
 
