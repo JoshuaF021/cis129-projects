@@ -2,32 +2,36 @@
     CIS129 LAB 6
     10/15/2024"""
 
-"""Assume that hot dogs come in packages of 10, and hot dog buns come in packages of 8. 
-Design a modular program that calculates the number of packages of hot dogs and the number of packages of hot dog buns needed for a cookout, with the minimum amount of leftovers. 
-The program should ask the user for the number of people attending the cookout, and the number of hot dogs each person will be given. The program should display the following:
-
-    The minimum number of packages of hot dogs required.
-    The minimum number of packages of buns required
-    The number of hot dogs that will be left over
-    The number of buns that will be left over"""
-
-
 #Program Start
-#Set variables
-totalHotDogs = 0
 
-getTotalHotDogs(totalHotDogs) 
-showResults(totalHotDogs)
 
-def getTotalHotDogs(totalHotDogs):
+#calls to Functions
+#getTotalHotDogs(totalHotDogs) 
+#showResults(totalHotDogs)
+
+def main():
+    #Set variable
+    totalHotDogs = 0
+    #call functions
+    totalHotDogs = getTotalHotDogs()
+    showResults(totalHotDogs)
+
+
+#define function that asks for number of attendees and dogs per attendee, calculates the total and sets that value to the variable total
+def getTotalHotDogs():
+    #sets variables
     attendees = 0
     hotDogs = 0
+    #asks for input from user
     attendees = int(input("maximum attendees?"))
-    hotDogs = int(input("designated hot dogs per attendee?")) 
+    hotDogs = int(input("designated hot dogs per attendee?"))
+    #calculate and return total
     total = attendees * hotDogs
     return total
 
-def showResults(totalHotDogs):
+# define function to calculate and print out number of hot dog packs needed, bun packs needed, remaining dogs and remaining buns, based on total from getTotalHotDogs function above
+def showResults(total):
+    #set constants and variables
     DOGS = 10
     BUNS = 8
     dogsLeft = 0 
@@ -43,12 +47,11 @@ def showResults(totalHotDogs):
     #Set minBuns as result of equation using total, BUNS and bunsLeft
     int(minBuns) == (total / BUNS) + (0 ** (0 ** bunsLeft))
 
+    #print out number of hot dog packs needed, bun packs needed, remaining dogs and remaining buns
     print("\nMinimum packages of hot dogs needed", int(minDogs))
     print("Minimum packages of hot dog buns needed", int(minBuns))
     print("Hot dogs remaining", int(dogsLeft))
     print("Hot dog buns remaining", int(bunsLeft))
 
-
-
-
+main()
 #End of Program
