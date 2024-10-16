@@ -3,12 +3,7 @@
     10/15/2024"""
 
 #Program Start
-
-
-#calls to Functions
-#getTotalHotDogs(totalHotDogs) 
-#showResults(totalHotDogs)
-
+#define main function which calls the other 2 functions which are defined below
 def main():
     #Set variable
     totalHotDogs = 0
