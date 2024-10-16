@@ -3,15 +3,22 @@
     10/15/2024"""
 
 #Program Start
-#Set variables
-totalHotDogs = 0
+
 
 #calls to Functions
-getTotalHotDogs(totalHotDogs) 
-showResults(totalHotDogs)
+#getTotalHotDogs(totalHotDogs) 
+#showResults(totalHotDogs)
+
+def main():
+    #Set variable
+    totalHotDogs = 0
+    #call functions
+    totalHotDogs = getTotalHotDogs()
+    showResults(totalHotDogs)
+
 
 #define function that asks for number of attendees and dogs per attendee, calculates the total and sets that value to the variable total
-def getTotalHotDogs(totalHotDogs):
+def getTotalHotDogs():
     #sets variables
     attendees = 0
     hotDogs = 0
@@ -23,7 +30,7 @@ def getTotalHotDogs(totalHotDogs):
     return total
 
 # define function to calculate and print out number of hot dog packs needed, bun packs needed, remaining dogs and remaining buns, based on total from getTotalHotDogs function above
-def showResults(totalHotDogs):
+def showResults(total):
     #set constants and variables
     DOGS = 10
     BUNS = 8
@@ -45,4 +52,6 @@ def showResults(totalHotDogs):
     print("Minimum packages of hot dog buns needed", int(minBuns))
     print("Hot dogs remaining", int(dogsLeft))
     print("Hot dog buns remaining", int(bunsLeft))
+
+main()
 #End of Program
