@@ -3,6 +3,7 @@
 A dramatic theater has three seating sections, and it charges the following prices for tickets in each section:
 
 section A seats cost $20 each, section B seats cost $15 each, and section C seats cost $10 each."""
+
 main()
     A = 20
     B = 15
@@ -17,6 +18,10 @@ main()
     newValue = 0
     counter = 0
 
+print("Welcome to Josh's Theater Seating Lab!
+      Section A seats cost ", A " each, section B seats cost ", B " each, and section C seats cost ", C " each.
+      The theater has", Aseats " seats in section A, ", Bseats " seats in section B, and ", Cseats " seats in section C."
+
 
 """Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. 
 The program should validate the numbers that are entered for each section.
@@ -29,6 +34,12 @@ Csold = 0
 Asold = input("How many tickes sold in section A?")
 Bsold = input("How many tickes sold in section B?")
 Csold = input("How many tickes sold in section C?")
+
+
+
+newValue = getValidNumber()
+
+while (newValue != SENTINEL)
 
 
     Here are some further clarifications about the Homework:
