@@ -1,8 +1,35 @@
 """Theater Seating Lab:
 
-A dramatic theater has three seating sections, and it charges the following prices for tickets in each section: section A seats cost $20 each, section B seats cost $15 each, and section C seats cost $10 each. The theater has 300 seats in section A, 500 seats in section B, and 200 seats in section C. Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. The program should validate the numbers that are entered for each section.
+A dramatic theater has three seating sections, and it charges the following prices for tickets in each section:
 
-Make sure to generalize the process so that a theater can have any number of sections.
+section A seats cost $20 each, section B seats cost $15 each, and section C seats cost $10 each."""
+main()
+    A = 20
+    B = 15
+    C = 10
+
+"""The theater has 300 seats in section A, 500 seats in section B, and 200 seats in section C."""
+
+    Aseats = 300
+    Bseats = 500
+    Cseats = 200
+    SENTINEL = -1
+    newValue = 0
+    counter = 0
+
+
+"""Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. 
+The program should validate the numbers that are entered for each section.
+Make sure to generalize the process so that a theater can have any number of sections."""
+
+Asold = 0
+Bsold = 0
+Csold = 0
+
+Asold = input("How many tickes sold in section A?")
+Bsold = input("How many tickes sold in section B?")
+Csold = input("How many tickes sold in section C?")
+
 
     Here are some further clarifications about the Homework:
     A program that does not work, or crashes, will earn 0 points for the assignment.
