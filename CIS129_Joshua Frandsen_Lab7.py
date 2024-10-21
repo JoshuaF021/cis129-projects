@@ -19,8 +19,8 @@ main()
     counter = 0
 
 print("Welcome to Josh's Theater Seating Lab!
-      Section A seats cost ", A " each, section B seats cost ", B " each, and section C seats cost ", C " each.
-      The theater has", Aseats " seats in section A, ", Bseats " seats in section B, and ", Cseats " seats in section C.")
+        Section A seats cost ", A " each, section B seats cost ", B " each, and section C seats cost ", C " each.
+        The theater has", Aseats " seats in section A, ", Bseats " seats in section B, and ", Cseats " seats in section C.")
 
 
 """Design a program that asks for the number of tickets sold in each section and then displays the amount of income generated from ticket sales. 
