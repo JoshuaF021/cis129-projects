@@ -7,12 +7,12 @@ import random
 
 # the main function
 def main():
-print()
+    print()
 
 # initialize variables
-endProgram == no
-playerOne == NO NAME
-playerTwo == NO NAME
+endProgram = 'no'
+playerOne = 'NO NAME'
+playerTwo = 'NO NAME'
 
 # call to inputNames
 playerOne, playerTwo = inputNames(playerOne, playerTwo)
@@ -20,7 +20,7 @@ playerOne, playerTwo = inputNames(playerOne, playerTwo)
 # while loop to run program again
 while endProgram == 'no':
       # populate variables
-      winnersName == NO NAME
+      winnersName = 'NO NAME'
       p1number = 0
       p2number = 0
   
@@ -33,24 +33,24 @@ endProgram = input('Do you want to end program? (yes/no): ')
 
 #this function gets the players names
 inputNames(playerOne, playerTwo)
-          playerOne = input("Enter First Player Name:")
-          playerTwo = input("Enter Second Player Name:")
-          return playerOne, playerTwo
+playerOne = input("Enter First Player Name:")
+playerTwo = input("Enter Second Player Name:")
+return playerOne, playerTwo
 
 #this function will get the random values
-rollDice(p1number, p2number, playerOne, playerTwo, winnerName)
-        p1number = random.randint(1, 6)
-        p2number = random.randint(1, 6)
+def rollDice(p1number, p2number, playerOne, playerTwo, winnerName):
+    p1number = random.randint(1, 6)
+    p2number = random.randint(1, 6)
 
-        if p1number = p2number
-           winnerName == TIE
-        elif p1number > p2number
-             winnerName == playerOne
-        else winnerName == playerTwo
-        return winnerName
+    if p1number == p2number:
+        winnerName = 'TIE'
+    elif p1number > p2number:
+            winnerName == playerOne
+    else: winnerName == playerTwo
+    return winnerName
 
 #this function displays the winner
 displayInfo(winnerName)
-            print(winnerName)
+print(winnerName)
 # calls main
 main()
