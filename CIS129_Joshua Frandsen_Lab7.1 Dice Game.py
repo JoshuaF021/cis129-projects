@@ -8,34 +8,29 @@ import random
 # the main function
 def main():
     print()
-
-# initialize variables
-endProgram = 'no'
-playerOne = 'NO NAME'
-playerTwo = 'NO NAME'
-
-# call to inputNames
-playerOne, playerTwo = inputNames(playerOne, playerTwo)
-
-# while loop to run program again
-while endProgram == 'no':
-      # populate variables
-      winnersName = 'NO NAME'
-      p1number = 0
-      p2number = 0
-  
-# call to rollDice
-winnerName = rollDice(p1number, p2number, playerOne, playerTwo, winnerName)
+    # initialize variables
+    endProgram = 'no'
+    playerOne = 'NO NAME'
+    playerTwo = 'NO NAME'
+    # call to inputNames
+    playerOne, playerTwo = inputNames(playerOne, playerTwo)
+    # while loop to run program again
+    while endProgram == 'no':
+          # populate variables
+          winnersName = 'NO NAME'
+          p1number = 0
+          p2number = 0
+    
 
 # call to displayInfo
-displayInfo(winnerName)
-endProgram = input('Do you want to end program? (yes/no): ')
+def displayInfo(winnerName):
+    endProgram = input('Do you want to end program? (yes/no): ')
 
 #this function gets the players names
-inputNames(playerOne, playerTwo)
-playerOne = input("Enter First Player Name:")
-playerTwo = input("Enter Second Player Name:")
-return playerOne, playerTwo
+def inputNames(playerOne, playerTwo):
+    playerOne = input("Enter First Player Name:")
+    playerTwo = input("Enter Second Player Name:")
+    return playerOne, playerTwo
 
 #this function will get the random values
 def rollDice(p1number, p2number, playerOne, playerTwo, winnerName):
@@ -48,6 +43,9 @@ def rollDice(p1number, p2number, playerOne, playerTwo, winnerName):
             winnerName == playerOne
     else: winnerName == playerTwo
     return winnerName
+
+# call to rollDice
+winnerName = rollDice(p1number, p2number, playerOne, playerTwo, winnerName)
 
 #this function displays the winner
 displayInfo(winnerName)
