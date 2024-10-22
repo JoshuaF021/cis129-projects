@@ -38,24 +38,23 @@ if
 
 #ask user for number of tickets
 Asold = input("How many tickes sold in section A?")
-
-
-
 Bsold = input("How many tickes sold in section B?")
 Csold = input("How many tickes sold in section C?")
 
 
+def getInteger():
+    input()
 
-newValue = getValidNumber()
-
-getValidNumber()
+def getValidNumber(newValue, lowestValue, higheestValue):
     newValue = 0
-    newValue = getInteger()
+    newValue = getInteger(msg)
 
     while newValue < lowestValue or newValue > highestValue
           print("Invalid Value!")
           newValue = getInteger()
     return newValue
+
+newValue = getValidNumber()
 
 
     """Here are some further clarifications about the Homework:
