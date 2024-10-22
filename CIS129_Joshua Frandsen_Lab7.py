@@ -32,6 +32,10 @@ Asold = 0
 Bsold = 0
 Csold = 0
 
+sold = 0
+
+if 
+
 #ask user for number of tickets
 Asold = input("How many tickes sold in section A?")
 
@@ -51,10 +55,10 @@ getValidNumber()
     while newValue < lowestValue or newValue > highestValue
           print("Invalid Value!")
           newValue = getInteger()
-          return newValue
+    return newValue
 
 
-    Here are some further clarifications about the Homework:
+    """Here are some further clarifications about the Homework:
     A program that does not work, or crashes, will earn 0 points for the assignment.
     Write generalized routines. Do not have any hardcoded "A", "B", "C" outside of Main.
     Pass variables to generalized functions that return a value.
