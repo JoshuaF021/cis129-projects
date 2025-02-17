@@ -30,10 +30,22 @@ grandtotal = coffeetotal + muffintotal + teatotal + mochatotal + taxtotal
 #print receipt
 print("""\n***************************************
 My Coffee and Muffin Shop Receipt""")
-print(int(coffees),"Coffee at $5 each: $",coffeetotal)
-print(int(muffins),"Muffins at $4 each: $",muffintotal)
-print(int(teas),"Teas at $3 each: $",teatotal)
-print(int(mochas),"Mochas at $7 each: $",mochatotal)
+
+if coffees == 1:
+  print(int(coffees),"Coffee at $5: $",coffeetotal)
+else: print(int(coffees),"Coffees at $5 each: $",coffeetotal)
+  
+if muffins == 1:
+  print(int(muffins),"Muffin at $4: $",muffintotal)
+else: print(int(muffins),"Muffins at $4 each: $",muffintotal)
+  
+if teas == 1:
+  print(int(teas),"Tea at $3: $",teatotal)
+else: print(int(teas),"Teas at $3 each: $",teatotal)
+  
+if mochas == 1:
+  print(int(mochas),"Mocha at $7: $",mochatotal)
+else: print(int(mochas),"Mochas at $7 each: $",mochatotal)
 print("6% tax: $",taxtotal)
 print("---------")
 print("Total: $",grandtotal)
@@ -44,4 +56,4 @@ print("""Thank you for vising Josh's online
 coffee and muffin shop!
 It was a pleasure serving you!
 Enjoy your order 
-and we hope to see you again soon!""")
+and we hope to see you again soon! =)""")
