@@ -12,7 +12,7 @@ tax = .06
 
 #Get input from the user
 print("""***************************************
-My Coffee and Muffin Shop""")
+My Coffee and Muffin Shop\n""")
 coffees = float(input("Number of coffees bought?\n"))
 muffins = float(input("Number of muffins bought?\n"))
 teas = float(input("Number of teas bought?\n"))
