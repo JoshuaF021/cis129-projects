@@ -32,23 +32,23 @@ print("""\n***************************************
 My Coffee and Muffin Shop Receipt""")
 
 if coffees == 1:
-  print(int(coffees),"Coffee at $5: $",coffeetotal)
-else: print(int(coffees),"Coffees at $5 each: $",coffeetotal)
+  print(int(coffees),f"Coffee at $5: ${coffeetotal:.2f}")
+else: print(int(coffees),f"Coffees at $5: ${coffeetotal:.2f}")
   
 if muffins == 1:
-  print(int(muffins),"Muffin at $4: $",muffintotal)
-else: print(int(muffins),"Muffins at $4 each: $",muffintotal)
+  print(int(muffins),f"Muffin at $4: ${muffintotal:.2f}")
+else: print(int(muffins),f"Muffins at $4 each: ${muffintotal:.2f}")
   
 if teas == 1:
-  print(int(teas),"Tea at $3: $",teatotal)
-else: print(int(teas),"Teas at $3 each: $",teatotal)
+  print(int(teas),f"Tea at $3: ${teatotal:.2f}")
+else: print(int(teas),f"Teas at $3 each: ${teatotal:.2f}")
   
 if mochas == 1:
-  print(int(mochas),"Mocha at $7: $",mochatotal)
-else: print(int(mochas),"Mochas at $7 each: $",mochatotal)
-print("6% tax: $",taxtotal)
+  print(int(mochas),f"Mocha at $7: ${mochatotal:.2f}")
+else: print(int(mochas),f"Mochas at $7 each: ${mochatotal:.2f}")
+print(f"6% tax: ${taxtotal:.2f}")
 print("---------")
-print("Total: $",grandtotal)
+print(f"Total: ${grandtotal:.2f}")
 print("***************************************\n")
 
 #thank you message
