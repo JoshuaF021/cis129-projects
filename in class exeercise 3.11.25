@@ -1,0 +1,12 @@
+keepGoing = 'y'
+
+while keepGoing == 'y':
+    myNumber = int(input('Please enter an integer between 0-10 inclusive: '))
+
+    if 10 >= myNumber >= 0:
+        print(myNumber)
+
+    else:
+        print('sorry you must input an integer between 0 and 10 inclusive')
+    
+    keepGoing = input('want to keep going (y/n)?')
