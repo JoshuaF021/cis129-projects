@@ -5,22 +5,19 @@
 passes = 0  # number of passes
 failures = 0  # number of failures
 
- # get one exam result
-result = int(input('Enter result (1=pass, 2=fail): '))
-
-
-# process 10 students
+ # process 10 students
 for student in range(10):
-    while result == 1 or 2:
-         if result == 1:
-            passes = passes + 1
+    result = int(input('Enter result (1=pass, 2=fail): ')) # get one exam result
+    while result != 1 or 2:                                 #check for invalid input and if true request new input
+            result = int(input('Invalid input... Enter result (1=pass, 2=fail): '))
+    
+    if result == 1:             #calculate total passes
+        passes = passes + 1
 
-    int(input('Enter result (1=pass, 2=fail): '))
-
-# termination phase
-failures = 10 - passes
+    # termination phase
+failures = 10 - passes          #calculate fails and print totals
 print('Passed:', passes)
 print('Failed:', failures)
 
-if passes > 8:
+if passes > 8:                      #print bonus message if enough passes
    print('Bonus to instructor')
