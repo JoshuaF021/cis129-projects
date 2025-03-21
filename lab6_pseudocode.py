@@ -48,7 +48,7 @@ def main():
 
    #// Calculate the number of left over hot dogs.
    #Set 
-   dogsLeft = (DOGS - total MOD DOGS) MOD DOGS
+   dogsLeft = (DOGS - total % DOGS) % DOGS
 
    #// Calculate the minimum number of packages of hot dogs.
    #Set 
@@ -56,7 +56,7 @@ def main():
 
    #// Calculate the number of left over hot dog buns.
    #Set 
-   bunsLeft = (BUNS - total MOD BUNS) MOD BUNS
+   bunsLeft = (BUNS - total % BUNS) % BUNS
 
    #// Calculate the minimum number of packages of hot dogs buns.
    #Set 
