@@ -22,6 +22,10 @@ Programming Exercise (Hotdog Cookout Calculator)
 // Please convert the following code to Python Code and save as Lab6.py
 
 // main module """                                
+
+### need to import the math module
+import math
+
 def main():
    #// Local variable for the total number of hot dogs needed.
    #Declare Integer total
@@ -52,7 +56,8 @@ def main():
 
    #// Calculate the minimum number of packages of hot dogs.
    #Set 
-   minDogs = Math.ceil(total / DOGS) 
+   ### math not Math
+   minDogs = math.ceil(total / DOGS) 
 
    #// Calculate the number of left over hot dog buns.
    #Set 
@@ -60,12 +65,14 @@ def main():
 
    #// Calculate the minimum number of packages of hot dogs buns.
    #Set 
-   minBuns = Math.ceil(total / BUNS) 
+   ### math not Math
+   minBuns = math.ceil(total / BUNS) 
 
    #// Output ----------------------------------------
    #// Display the results.
    #Call 
-   showResults(dogsLeft, minDogs, bunsLeft, minBuns)
+   ### ShowResults not showResults
+   ShowResults(dogsLeft, minDogs, bunsLeft, minBuns)
 #End Module
 
 #// The getTotalHotDogs module gets the number of people
@@ -83,11 +90,13 @@ def getTotalHotDogs():
    hotDogs = 0 #// Hot dogs per person
 
    #// Get the number of people attending the cookout.
-   people = input("Enter the number of people attending the cookout: ")
+   ### convert people to an integer
+   people = int(input("Enter the number of people attending the cookout: "))
    #Input people
 
    #// Get the number of hot dogs each person will be given.
-   hotDogs = input(" Enter the number of hot dogs for each person: ")
+   ### convert hotDogs to an integer
+   hotDogs = int(input(" Enter the number of hot dogs for each person: "))
    #Input hotDogs
 
    #// Calculate the total number of hot dogs needed.
@@ -114,3 +123,6 @@ def ShowResults(dogsLeft, minDogs, bunsLeft, minBuns):
    #// Display the number of hot dog buns left over.
    print("Hot dog buns left over: ", bunsLeft)
 #End Module
+
+### call main() at the end
+main()
