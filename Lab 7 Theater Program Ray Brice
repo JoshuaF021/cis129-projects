@@ -1,0 +1,51 @@
+def main():
+
+  #set constants
+  A = 20
+  B = 15
+  B = 10
+
+  aSeats = 300
+  bSeats = 500
+  cSeats = 200
+
+  messageA = "How many tickes sold in section A?"
+  messageB = "How many tickes sold in section B?"
+  messageC = "How many tickes sold in section C?"
+
+  print("Welcome to Josh's Theater Seating Lab!"
+      "Section A seats cost $", A, " each, section B seats cost $", B, " each, and section C seats cost $", C, " each."
+      "The theater has", Aseats, " seats in section A, ", Bseats, " seats in section B, and ", Cseats, " seats in section C.")
+
+  #end main function
+
+
+# function to collect user input
+def getInteger(msg):
+  howMany = int(input(msg))
+  return howMany
+
+#function to validate input
+def getValidNumber(msg, HIGH):
+  newValue = getInteger(msg)
+
+  while newValue <= 0 or newValue > HIGH:
+    print('Invalid Value')
+    newValue = getInteger(msg)
+  return newValue
+
+
+main()
+
+"""
+    Here are some further clarifications about the Homework:
+    A program that does not work, or crashes, will earn 0 points for the assignment.
+    Write generalized routines. Do not have any hardcoded "A", "B", "C" outside of Main.
+    Pass variables to generalized functions that return a value.
+    ALL numbers in the problem statement MUST be stored in named constants. The section names should also be constants: A, B, C
+    Design the program so it will be relatively easy to add a section D to the program by adding some constants and a few statements in main.
+    Design the program so it will be easy to change the number of seats in each section or the cost of a seat in each section.
+    Display a welcome message with all the constant values (not hardcoded)
+    Give a subtotal for all purchases so far after each new purchase
+    Display the overall total at the end of the program, and the number of seats and subtotals for each section
+"""
