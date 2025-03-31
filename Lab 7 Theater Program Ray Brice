@@ -3,7 +3,7 @@ def main():
   #set constants
   A = 20
   B = 15
-  B = 10
+  C = 10
 
   aSeats = 300
   bSeats = 500
@@ -15,7 +15,15 @@ def main():
 
   print("Welcome to Josh's Theater Seating Lab!"
       "Section A seats cost $", A, " each, section B seats cost $", B, " each, and section C seats cost $", C, " each."
-      "The theater has", Aseats, " seats in section A, ", Bseats, " seats in section B, and ", Cseats, " seats in section C.")
+      "The theater has", aSeats, " seats in section A, ", bSeats, " seats in section B, and ", cSeats, " seats in section C.")
+  
+  
+  #calcutate total income
+  total = getValidNumber(messageA, aSeats) * A + getValidNumber(messageB, bSeats) * B + getValidNumber(messageC, cSeats) * C
+  
+
+  #print total
+  print('Total ticket sales = $', total)
 
   #end main function
 
@@ -29,12 +37,13 @@ def getInteger(msg):
 def getValidNumber(msg, HIGH):
   newValue = getInteger(msg)
 
-  while newValue <= 0 or newValue > HIGH:
+  while newValue < 0 or newValue > HIGH:
     print('Invalid Value')
     newValue = getInteger(msg)
   return newValue
 
 
+#call main
 main()
 
 """
