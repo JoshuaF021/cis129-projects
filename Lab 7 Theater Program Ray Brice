@@ -9,13 +9,20 @@ def main():
   bSeats = 500
   cSeats = 200
 
-  messageA = "How many tickes sold in section A?"
-  messageB = "How many tickes sold in section B?"
-  messageC = "How many tickes sold in section C?"
+  messageA = "How many tickes sold in section A?: "
+  messageB = "How many tickes sold in section B?: "
+  messageC = "How many tickes sold in section C?: "
 
-  print("Welcome to Josh's Theater Seating Lab!"
-      "Section A seats cost $", A, " each, section B seats cost $", B, " each, and section C seats cost $", C, " each."
-      "The theater has", aSeats, " seats in section A, ", bSeats, " seats in section B, and ", cSeats, " seats in section C.")
+  print("************************************************\n"
+      "Welcome to Josh's Theater Seating Lab!\n\n"
+      "Section A seats cost $", A, " each\n"
+      "Section B seats cost $", B, " each\n"
+      "Section C seats cost $", C, " each.\n\n"
+      "The theater has:\n", 
+      aSeats, " seats in section A\n",
+      bSeats, " seats in section B\n", 
+      cSeats, " seats in section C\n"
+      "************************************************\n")
   
   
   #calcutate total income
@@ -23,22 +30,29 @@ def main():
   
 
   #print total
-  print('Total ticket sales = $', total)
+  print('\n************************************************'
+        '\nTotal ticket sales = $', total,
+        '\n************************************************')
 
   #end main function
 
 
-# function to collect user input
+# function to collect user input and test if it's an integer or not
 def getInteger(msg):
-  howMany = int(input(msg))
-  return howMany
+  myInt = input(msg)
+  try:
+        return int(myInt)   # if string myInt can be converted to a valid integer, just return the converted integer here
+  except ValueError:        # otherwise display an error message and call this function again
+        print('\n"',myInt,'" is not an integer. Please enter a valid integer:\n')
+        return getInteger(msg)
+  return myInt
 
-#function to validate input
+#function to test if validated integer is in the correct range
 def getValidNumber(msg, HIGH):
   newValue = getInteger(msg)
 
   while newValue < 0 or newValue > HIGH:
-    print('Invalid Value')
+    print('\nInvalid Value. There are', HIGH, 'seats in that section. Try again:\n')
     newValue = getInteger(msg)
   return newValue
 
