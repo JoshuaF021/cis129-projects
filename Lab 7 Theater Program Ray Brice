@@ -26,12 +26,16 @@ def main():
   
   
   #calcutate total income
-  total = getValidNumber(messageA, aSeats) * A + getValidNumber(messageB, bSeats) * B + getValidNumber(messageC, cSeats) * C
+  total = getValidNumber(messageA, aSeats) * A 
+  print('Running total: $',total)
+  total += getValidNumber(messageB, bSeats) * B 
+  print('Running total: $',total)
+  total += getValidNumber(messageC, cSeats) * C
   
 
   #print total
   print('\n************************************************'
-        '\nTotal ticket sales = $', total,
+        '\nGrand Total of ticket sales = $', total,
         '\n************************************************')
 
   #end main function
