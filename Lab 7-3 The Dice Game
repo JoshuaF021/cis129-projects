@@ -43,8 +43,8 @@ def rollDice(p1number, p2number, playerOne, playerTwo, winnerName):
     if p1number == p2number:
        winnerName = 'TIE'
     elif p1number > p2number:
-       winnerName == playerOne
-    else: winnerName == playerTwo
+       winnerName = playerOne
+    else: winnerName = playerTwo
 
     return winnerName
 
