@@ -1,6 +1,22 @@
-myString = str(input("Please enter a word or phrase to test if it's a palindrome: "))
+def main():
 
-def is_palindrome(x):
-  print(''.join(e for e in myString if e.isalnum()))
-  print(myString)
-  
+  myString = input("\nPlease enter a word or phrase to test if it's a palindrome: ")
+  #print(myString)
+
+  if is_palindrome(myString) == True:
+    print('Yes that is a palindrome.')
+  else:
+    print('No that is not a palindrome.')
+
+  #print(''.join(e for e in myString if e.isalnum()))
+  def is_palindrome(myString):
+
+    #print(''.join(e.lower() for e in myString if e.isalnum()))
+
+    if myString.reverse == ''.join(e.lower() for e in myString if e.isalnum()):
+      myString = True
+    else:
+      myString = False
+    return myString
+
+main()
