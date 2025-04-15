@@ -1,0 +1,6 @@
+myString = str(input("Please enter a word or phrase to test if it's a palindrome: "))
+
+def is_palindrome(x):
+  print(''.join(e for e in myString if e.isalnum()))
+  print(myString)
+  
