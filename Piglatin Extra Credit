@@ -1,0 +1,14 @@
+vowels = ['a','e','i','o','u']
+i = 0
+
+myWords = input('Enter a word or phrase to translate it into Piglatin: ').split()
+
+for word in myWords:  
+    if word[0].lower in vowels:
+        myWords[i] = word[0] + 'ay'
+    else:
+        myWords[i] = word[1:] + word[0] + 'ay'
+    i += 1
+
+for word in myWords:
+    print(word, end = ' ')
