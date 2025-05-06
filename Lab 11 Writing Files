@@ -2,12 +2,15 @@ total = 0  # sum of grades
 grade_counter = 0 # number of grades entered
 
 # processing phase
-grade = int(input('Enter grade, -1 to end: '))  # get one grade
+with open('grades.txt', mode='w') as grades:
+    grade = int(input('Enter grade, -1 to end: '))  # get one grade
+    grades.write(str(grade))
 
-while grade != -1:
-   total += grade
-   grade_counter += 1
-   grade = int(input('Enter grade, -1 to end: '))
+    while grade != -1:
+        grades.write(str(grade))
+        total += grade
+        grade_counter += 1
+        grade = int(input('Enter grade, -1 to end: '))
 
 # termination phase
 if grade_counter != 0:
@@ -15,3 +18,13 @@ if grade_counter != 0:
   print(f'Class average is {average:.2f}')
 else:
   print('No grades were entered')
+
+with open('grades.txt', mode='r') as grades:
+   total = count = 0
+   print(f'{"Grade":<10}')
+   for record in grades:
+        print(record, end = '')
+        total += int(record)
+        count += 1
+print(f'{"Total"}{"Count"}{"Average"}')
+print(f'{total:<10}{count:<10}{total/count:<10.2f}')
