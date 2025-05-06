@@ -28,3 +28,16 @@ with open('grades.txt', mode='r') as grades:
         count += 1
 print(f'{"Total"}{"Count"}{"Average"}')
 print(f'{total:<10}{count:<10}{total/count:<10.2f}')
+
+import csv
+
+with open('grades.csv', mode = 'w', newline ='') as grades:
+    writer = csv.writer(grades)
+    fname = input('Please enter first name, or "done" to end: ')
+    while fname != 'done':
+        Lname = input('Please enter last name: ')
+        ex1 = int(input('Please enter 1st exam grade: '))
+        ex2 = int(input('Please enter 2nd exam grade: '))
+        ex3 = int(input('Please enter 3rd exam grade: '))
+        writer.writerow([fname,Lname,ex1,ex2,ex3])
+        fname = input('Please enter first name, or "done" to end: ')
