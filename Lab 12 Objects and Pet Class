@@ -1,0 +1,88 @@
+"""
+1.	Pet Class
+Design a class named Pet, which should have the following fields:
+■	name: The name field holds the name of a pet.
+■	type: The type field holds the type of animal that a pet is. Example values are "Dog", "Cat", and "Bird".
+■	age: The age field holds the pet’s age.
+2.	The Pet class should also have the following methods:
+■	Name: The Name method stores a value in the name field.
+■	Type: The Type method stores a value in the type field.
+■	Age: The Age method stores a value in the age field.
+■	getName: The getName method returns the value of the name field.
+■	getType: The getType method returns the value of the type field.
+■	getAge: The getAge method returns the value of the age field.
+3.	Once you have designed the class, design a program that creates an object of the class and prompts the user to enter the name, type, and age of his or her pet. 
+This data should be stored in the object. Use the object’s accessor methods to retrieve the pet’s name, type, and age and input( this data on the screen.  
+The output should be similar to the picture below
+"""
+
+# main module
+def main()
+# Declare input variables
+  	Declare String inputName, String inputType, Integer inputAge
+
+# class variable to hold a pet
+Declare Pet Animal
+ 
+# create a Pet object
+ Animal = new Pet()
+ 
+# Get values for a pet
+inputName = input("Enter a pet name: ")
+Animal.Name(inputName)
+ 
+inputType = input("Enter a pet type: ")
+Animal.Type(inputType)
+ 
+inputAge = input("Enter a pet age: ")
+Animal.Age(inputAge)
+ 
+# Show values for this pet
+print("The pet name is ", Animal.getName())
+print("The pet type is ", Animal.getType())
+print("The pet age is ", Animal.getAge())
+##End Module
+ 
+ 
+Class Pet
+  	# Fields
+  	Private String name
+  	Private String type
+  	Private Integer age
+ 
+  	# Constructor
+  	#Public Module
+    Pet(String n, String t, Integer a)
+        	 name = n
+        	 type = t
+        	 age = a
+  	#End Module
+ 
+  	# Mutators
+  	#Public Module 
+    Name(String n)
+        	 name = n
+  	#End Module
+ 
+  	#Public Module 
+    Type(String t)
+        	 type = t
+  	#End Module
+ 
+#Public Module 
+Age(Integer a)
+        	 age = a
+  	#End Module
+ 
+  	# Accessors
+  	#Public Function String getName()
+        	Return name
+  	#End Function
+ 
+  	#Public Function String getType()
+        	Return type
+  	#End Function
+ 
+  	#Public Function getAge()
+        	Return age
+  	#End Function
