@@ -17,72 +17,73 @@ The output should be similar to the picture below
 """
 
 # main module
-def main()
-# Declare input variables
-  	Declare String inputName, String inputType, Integer inputAge
-
-# class variable to hold a pet
-Declare Pet Animal
+def main():
+	
+	# create a Pet object
+    Animal = Pet()
  
-# create a Pet object
- Animal = new Pet()
+	# Get values for a pet
+    inputName = input("Enter a pet name: ")
+    Animal.Name(inputName)
  
-# Get values for a pet
-inputName = input("Enter a pet name: ")
-Animal.Name(inputName)
+    inputType = input("Enter a pet type: ")
+    Animal.Type(inputType)
  
-inputType = input("Enter a pet type: ")
-Animal.Type(inputType)
+    inputAge = input("Enter a pet age: ")
+    Animal.Age(inputAge)
  
-inputAge = input("Enter a pet age: ")
-Animal.Age(inputAge)
- 
-# Show values for this pet
+	# Show values for this pet
 print("The pet name is ", Animal.getName())
 print("The pet type is ", Animal.getType())
 print("The pet age is ", Animal.getAge())
-##End Module
+	##End Module
  
  
-Class Pet
-  	# Fields
-  	Private String name
-  	Private String type
-  	Private Integer age
+class Pet:
+	# Fields
+  	#Private String _name
+  	#Private String _type
+  	#Private Integer _age
  
   	# Constructor
   	#Public Module
-    Pet(String n, String t, Integer a)
-        	 name = n
-        	 type = t
-        	 age = a
+    Pet(str(n), str(t), int(a))
+    _name = n
+    _type = t
+    _age = a
   	#End Module
  
   	# Mutators
   	#Public Module 
-    Name(String n)
-        	 name = n
+    Name(str(n))
+    _name = n
   	#End Module
  
   	#Public Module 
-    Type(String t)
-        	 type = t
+    Type(str(t))
+    _type = t
   	#End Module
  
-#Public Module 
-Age(Integer a)
-        	 age = a
+	#Public Module 
+    Age(int(a))
+    _age = a
   	#End Module
  
   	# Accessors
-  	#Public Function String getName()
-        	Return name
+  	#Public Function String 
+    def getName(self):
+	    return _name
   	#End Function
  
-  	#Public Function String getType()
-        	Return type
+  	#Public Function String
+    def getType(self):
+        return _type
   	#End Function
  
-  	#Public Function getAge()
-        	Return age
+  	#Public Function 
+    def getAge(self):
+        return _age
   	#End Function
+
+#call main
+main()
