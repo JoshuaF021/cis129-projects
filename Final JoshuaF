@@ -1,0 +1,37 @@
+ 
+Your python script should run and before each question print out "Answer for Question 1" and then print the answer on the next line.
+1. (3 points) Write python code to calculate the sum of 12.8, 18.2 and 0.4 and store it in the variable "total" then display total's value with 2 digits of precision.
+2. (3 points) Write python code to prompt the user for a floating point number and print out that number with 2 digits of precision and the type of that number.
+3. (3 points) Write a python script to display the diameter, circumference and area of a circle with radius = 3.5.
+   Use the following formulas (r = radius, diameter = 2r, circumference = 2*pi*r and area = pi*r^2)
+   Use 3.14159 for the value of pi and print out all three calculated values with 2 digits of precision.
+4. (3 points) Write a script that calculates the squares and cubes of the numbers from 0 to 5. print the resulting values in table format as shown below. 
+number    square    cube
+0    0    0
+1    1    1
+2    4    8
+3    9    27
+4    16    64
+5    25    125
+Use the tab escape sequence to achieve the three column output.
+5. (3 points) Design and if-then statement that assigns 20 to the variable y and assigns 40 to variable z if variable x is greater than 100. Set y and z equal to 0 at the beginning. Prompt the user for an integer and then print out y and z.
+6. (6 points) A class of ten students took a quiz. Their grades (integers in the range 0 – 100) are 98, 76, 71, 87, 83, 90, 57, 79, 82, 94. Determine the class average on the quiz and print it out using 2 digits of precision. Use a list to store the values.
+7. (6 points) Use a for loop and a range function to print the numbers from 33 to 0 decrementing by 3 on the same line, e.g. 33 30 27 24 ... 0
+8. (6 points) Write a function called squared(myInt). Call squared which will prompt the user for an integer and return the square of that integer which you will print as an integer.
+9. (6 points) Import the random module and print out 10 random rolls of a single die, one per line, e.g.
+Roll 1: 1
+Roll 2: 5
+Roll 3: 3
+10. (4 points) Create list1 = [10,20,30]; list2 = [40,50]; concatenated_list = list1 + list2 and print out concatenated_list.
+11. (6 points) Set x = 'ABC'. Using the list and join functions, output the string 'A#B#C'.
+12. (4 points) Start with the dictionary: country_codes = {'Finland': 'fi', 'South Africa': 'za', 'Nepal': 'np'} and print out only the keys, one per line.
+13. (3 points) Using a formatted print statement, print out the character value of the integer 66, e.g. display "Character with ASCII value 66: ???".
+14. (4 points) Create a file named "accounts.txt" with mode='w' that contains these 3 lines: '100 Bill 12.34'
+'200 Joe 0.00'
+'300 Tom 4.21'
+Use the "with" and "open" key words. Then open the file as read-only and print out each line.
+Extra Credit (10 points). Create a Car class that has 2 fields: year and cylinders. 
+It has 5 methods: start_engine which prints "Start your engine", set_year which sets the year of the car, set_cylinders which sets the number of cylinders, get_year which returns the year and get_cylinders which returns the number of cylinders.
+Create a Car object called myCar. Set the year to 2020 and the cylinders to 4. Print out the year using the get_year method on one line. 
+Print out the number of cylinders using the get_cylinders method on one line and call the start_engine method which should print out "Start your engine" on one line.
+
