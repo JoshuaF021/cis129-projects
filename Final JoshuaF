@@ -56,12 +56,15 @@ print("\nAnswer for Question 8: Your integer squared =", squared(0))
 
 
 #9____________________________________________________________________________
+import random
 
-9. (6 points) Import the random module and print out 10 random rolls of a single die, one per line, e.g.
-Roll 1: 1
-Roll 2: 5
-Roll 3: 3
+print("\nAnswer for Question 9:")
 
+for i in range(1,4):
+    roll = random.randint(1, 6)
+    print(f"Roll {i}: {roll}")
+
+#10____________________________________________________________________________
 10. (4 points) Create list1 = [10,20,30]; list2 = [40,50]; concatenated_list = list1 + list2 and print out concatenated_list.
 11. (6 points) Set x = 'ABC'. Using the list and join functions, output the string 'A#B#C'.
 12. (4 points) Start with the dictionary: country_codes = {'Finland': 'fi', 'South Africa': 'za', 'Nepal': 'np'} and print out only the keys, one per line.
