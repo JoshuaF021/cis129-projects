@@ -1,6 +1,7 @@
+#1
 total = 12.8 + 18.2 + 0.4
 
-print(f"Answer for Question 1: {total: .2f}\n")
+print(f"\nAnswer for Question 1: {total: .2f}\n")
 #2____________________________________________________________________________
 myFloat = float(input("Please enter a decimal number: "))
 
@@ -13,7 +14,7 @@ d = 2*r
 c = d * pi
 a = pi * r **2
 
-print(f"Answer for Question 3: diameter = {d: .2f} circumference = {c: .2f} and area = {a: .2f} \n")
+print(f"Answer for Question 3: diameter ={d: .2f} circumference ={c: .2f} and area ={a: .2f} \n")
 
 #4____________________________________________________________________________
 print(f"Answer for Question 4:")
@@ -25,13 +26,13 @@ for i in range(6):
 #5____________________________________________________________________________
 y = 0
 z = 0
-x = int(input("Please enter an integer: "))
+x = int(input("\nPlease enter an integer: "))
 
 if x > 100:
     y = 20
     z = 40
 
-print(f"Answer for Question 5: y = ", y, " & z = ", z)
+print("\nAnswer for Question 5: y =", y, "& z =", z)
 
 #6____________________________________________________________________________
 myList = [98, 76, 71, 87, 83, 90, 57, 79, 82, 94]
@@ -65,16 +66,73 @@ for i in range(1,4):
     print(f"Roll {i}: {roll}")
 
 #10____________________________________________________________________________
-10. (4 points) Create list1 = [10,20,30]; list2 = [40,50]; concatenated_list = list1 + list2 and print out concatenated_list.
-11. (6 points) Set x = 'ABC'. Using the list and join functions, output the string 'A#B#C'.
-12. (4 points) Start with the dictionary: country_codes = {'Finland': 'fi', 'South Africa': 'za', 'Nepal': 'np'} and print out only the keys, one per line.
-13. (3 points) Using a formatted print statement, print out the character value of the integer 66, e.g. display "Character with ASCII value 66: ???".
-14. (4 points) Create a file named "accounts.txt" with mode='w' that contains these 3 lines: '100 Bill 12.34'
-'200 Joe 0.00'
-'300 Tom 4.21'
-Use the "with" and "open" key words. Then open the file as read-only and print out each line.
-Extra Credit (10 points). Create a Car class that has 2 fields: year and cylinders. 
-It has 5 methods: start_engine which prints "Start your engine", set_year which sets the year of the car, set_cylinders which sets the number of cylinders, get_year which returns the year and get_cylinders which returns the number of cylinders.
-Create a Car object called myCar. Set the year to 2020 and the cylinders to 4. Print out the year using the get_year method on one line. 
-Print out the number of cylinders using the get_cylinders method on one line and call the start_engine method which should print out "Start your engine" on one line.
+list1 = [10,20,30]
+list2 = [40,50]
 
+concatenated_list = list1 + list2
+
+print("\nAnswer for Question 10:", concatenated_list)
+
+#11____________________________________________________________________________
+x = 'ABC'
+newList = "#".join(list(x))
+print("\nAnswer for Question 11:", newList)
+
+#12____________________________________________________________________________
+country_codes = {'Finland': 'fi', 'South Africa': 'za', 'Nepal': 'np'}
+
+print("\nAnswer for Question 12:")
+
+for key,value in country_codes.items():
+    print(f'{key}')
+
+#13____________________________________________________________________________
+print("\nAnswer for Question 13:")
+
+print(f"Character with ASCII value 66: {chr(66)}")
+
+#14____________________________________________________________________________
+with open('accounts.txt', mode='w') as accounts:
+    accounts.write('100 Bill 12.34\n')
+    accounts.write('200 Joe 0.00\n')
+    accounts.write('300 Tom 4.21\n')
+
+print("\nAnswer for Question 14:")
+
+with open('accounts.txt', mode='r') as accounts:
+    print(f'{"Accounts":<10}{"Name":<10}{"Balance":>20}')
+
+    for record in accounts:
+        account, name, balance = record.split()
+        print(f'{account:<10}{name:<10}{balance:>20}')
+
+#Extra Credit____________________________________________________________________________
+class Car: #defining the class
+    #Methods
+        def start_engine(self):
+            print("Start your engine!!!")
+    #Mutators  
+        def set_year(self,year): #this function is a method/setter/mutator
+            self.year = year #attribute
+
+
+        def set_cylinders(self,cylinders):
+            self.cylinders = cylinders
+   	#Accessors
+        def get_year(self): #getter method/accessor
+            return self.year
+
+
+        def get_cylinders(self):
+            return self.cylinders
+   
+myCar = Car()
+
+
+myCar.set_year("2002")
+myCar.set_cylinders('4')
+
+print("\nAnswer for Extra Credit:")
+print(f'The year of the car is: {myCar.get_year()}')
+print(f'The # of cylinders is: {myCar.get_cylinders()}')
+myCar.start_engine()
